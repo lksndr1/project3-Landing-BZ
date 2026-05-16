@@ -1,0 +1,16 @@
+:root {
+    --bg-white: #FFF;
+    --purple: #7144F4;
+    --Brand-100: #D6E4FA;
+    --Brand-500: #3179E7;
+
+
+    --text-white: #FFF;
+    --text-purple: #7144F4;
+    --text-gray: #808080;
+
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: Montserrat, sans-serif;
+    --third-font: 'Inter', sans-serif;
+
+}
