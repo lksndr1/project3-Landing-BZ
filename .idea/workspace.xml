@@ -4,15 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f72cc108-d460-4ca5-85c9-ba2e5031f845" name="Changes" comment="" />
+    <list default="true" id="f72cc108-d460-4ca5-85c9-ba2e5031f845" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/images/bz-logo-white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styles/variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/variables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="3DlFGTIe9tsNWlzESqcDvu1efcB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,11 +33,13 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/Landing",
+    "last_opened_file_path": "C:/Projects Files and Info/Landing BZ",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -39,6 +51,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Projects Files and Info\Landing BZ\assets\images" />
       <recent name="C:\Users\user\Desktop\Landing" />
       <recent name="C:\Users\user\Desktop\Landing\assets\styles" />
       <recent name="C:\Users\user\Desktop\Landing\assets" />
@@ -59,6 +72,8 @@
       <option name="presentableId" value="Default" />
       <updated>1778848653560</updated>
       <workItem from="1778848655200" duration="5001000" />
+      <workItem from="1778855692564" duration="744000" />
+      <workItem from="1778938548101" duration="10731000" />
     </task>
     <servers />
   </component>

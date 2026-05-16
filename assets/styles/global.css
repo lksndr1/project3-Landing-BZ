@@ -1,0 +1,17 @@
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 96px;
+}
+
+.button-b1 {
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: 1.5px solid #EAE8FF;
+    background: var(--bg-white);
+    color: #BAB3FF;
+}
+
+main {
+    min-height: 200vh;
+}
