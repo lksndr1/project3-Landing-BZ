@@ -1,5 +1,10 @@
 body {
     color: var(--text-gray);
+    font-family: var(--third-font);
+}
+
+h1 {
+    font-family: var(--fourth-font);
 }
 
 h6 {
