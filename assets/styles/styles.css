@@ -121,9 +121,9 @@ footer {
     .footer-flex-wrapper {
         display: flex;
         justify-content: space-between;
-        padding-top: 64px;
+        padding: 64px 0;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1200px) {
             flex-direction: column;
             row-gap: 64px;
         }
@@ -133,7 +133,7 @@ footer {
             flex-direction: column;
             gap: 48px;
 
-            @media screen and (max-width: 1024px) {
+            @media screen and (max-width: 1200px) {
                 flex-direction: row;
                 justify-content: space-between;
             }
@@ -199,8 +199,57 @@ footer {
             display: flex;
             justify-content: space-between;
             gap: 120px;
+
+            h6 {
+                margin-bottom: 16px;
+            }
+
+            li {
+                margin-bottom: 12px;
+            }
+
+            .footer-flex-wrapper__menus__projects ul li {
+                position: relative;
+                padding-right: 32px;
+            }
+
+            .footer-flex-wrapper__menus__projects ul li::after {
+                content: "";
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+
+                background-image: url("../images/arrow-up-right.png");
+                background-size: contain;
+            }
         }
     }
 
+    .footer-copyright {
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 0;
+        border-top: 1.5px solid rgba(50, 50, 50, 0.10);
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-copyright__doc-wrapper {
+            display: flex;
+            gap: 16px;
+
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+            }
+        }
+    }
 
 }
