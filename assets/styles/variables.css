@@ -1,11 +1,13 @@
 :root {
     --bg-white: #FFF;
+    --bg-purple: #FAFAFE;
     --purple: #7144F4;
     --Brand-100: #D6E4FA;
     --Brand-500: #3179E7;
 
 
     --text-white: #FFF;
+    --text-black: #000;
     --text-purple: #7144F4;
     --text-gray: #00000099;
 

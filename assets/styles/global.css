@@ -3,18 +3,6 @@ body {
     font-family: var(--third-font);
 }
 
-h1 {
-    font-family: var(--fourth-font);
-}
-
-h6 {
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-}
-
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -27,6 +15,41 @@ h6 {
     @media screen and (max-width: 767px) {
         padding: 0 24px;
     }
+}
+
+.section-white {
+    padding: 120px 0;
+    background-color: var(--bg-white);
+
+    @media screen and (max-width: 1024px) {
+        padding: 60px 0;
+    }
+}
+
+.section-purple {
+    padding: 96px 0;
+    background-color: var(--bg-purple);
+}
+
+h1, h2 {
+    font-family: var(--fourth-font);
+    font-size: 48px;
+
+    @media screen and (max-width: 767px) {
+        font-size: 36px;
+    }
+}
+
+h2 {
+    color: var(--text-black);
+}
+
+h6 {
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
 }
 
 .button-b1 {

@@ -10,3 +10,12 @@ toggle.addEventListener('click', () => {
 
 // footer-year
 document.getElementById("year").textContent = new Date().getFullYear();
+
+//accordion
+const accordionItems = document.querySelectorAll('.accordion-item');
+accordionItems.forEach(item => {
+    const button = item.querySelector('.accordion-header');
+    button.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
+});
