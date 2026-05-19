@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f72cc108-d460-4ca5-85c9-ba2e5031f845" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/Button (1).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Button (2).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Button (3).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Button (4).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/Button.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/arrow-up-right.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scripts/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styles/variables.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styles/variables.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +52,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Projects Files and Info\Landing BZ\assets\images" />
+      <recent name="C:\Projects Files and Info\Landing BZ\assets\documents" />
       <recent name="C:\Users\user\Desktop\Landing" />
       <recent name="C:\Users\user\Desktop\Landing\assets\styles" />
       <recent name="C:\Users\user\Desktop\Landing\assets" />
@@ -78,7 +75,8 @@
       <workItem from="1778848655200" duration="5001000" />
       <workItem from="1778855692564" duration="744000" />
       <workItem from="1778938548101" duration="10963000" />
-      <workItem from="1779093973248" duration="14866000" />
+      <workItem from="1779093973248" duration="16723000" />
+      <workItem from="1779174343453" duration="5352000" />
     </task>
     <servers />
   </component>
