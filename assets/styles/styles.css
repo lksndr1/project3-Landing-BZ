@@ -115,7 +115,23 @@ header {
 
 .hero-section {
     padding-top: 180px;
+
+    .container {
+        display: flex;
+        gap: 64px;
+
+        .hero-section__form {
+            flex: 1;
+        }
+
+        .hero-section__map {
+            flex: 1;
+        }
+    }
 }
+
+
+
 
 footer {
     .footer-flex-wrapper {
