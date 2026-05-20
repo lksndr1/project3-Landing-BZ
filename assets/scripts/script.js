@@ -22,15 +22,25 @@ accordionItems.forEach(item => {
 
 // floors section
 import { floors } from './floors-data.js';
+
 const image = document.getElementById("floorImage");
+const imagemobile = document.getElementById("floorImageMobile");
 const title = document.getElementById("floorTitle");
 const description = document.getElementById("floorDescription");
 const roomsList = document.getElementById("roomsList");
+
+const buttons = document.querySelectorAll(".buttons button");
+
+function setActiveButton(index) {
+    buttons.forEach(btn => btn.classList.remove("active-button"));
+    buttons[index].classList.add("active-button");
+}
 
 function renderFloor(index) {
     const current = floors[index];
 
     image.src = current.image;
+    imagemobile.src = current.image;
     title.textContent = current.title;
     description.textContent = current.description;
 
@@ -42,10 +52,12 @@ function renderFloor(index) {
             </div>
         `)
         .join("");
+
+    setActiveButton(index);
 }
 
 // buttons
-document.querySelectorAll(".buttons button").forEach(button => {
+buttons.forEach(button => {
     button.addEventListener("click", () => {
         const index = Number(button.dataset.id);
         renderFloor(index);

@@ -387,7 +387,108 @@ header {
     }
 }
 
+/* ----------floors-section----------- */
+.floors-section {
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        border-radius: 16px;
+        background-color: #F4F3FF;
+        width: fit-content;
+        padding: 8px;
+        margin: 0 auto 42px;
 
+        button {
+            padding: 12px;
+            border-radius: 8px;
+            background-color: transparent;
+        }
+
+        .active-button {
+            color: var(--text-white);
+            background-color: var(--purple);
+        }
+    }
+
+    .floors-section__flex-wrapper {
+        display: flex;
+        gap: 64px;
+
+        .floors-section__flex-wrapper__image-wrapper {
+            flex: 1;
+
+            @media screen and (max-width: 1024px) {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .floor-info {
+            flex: 1;
+            color: var(--text-black);
+            font-family: var(--secondary-font);
+            font-weight: 500;
+
+            >p {
+                margin: 32px 0;
+            }
+
+            #roomsList .room {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                margin-bottom: 16px;
+                padding-left: 16px;
+                font-weight: 700;
+
+                .room-number {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 48px;
+                    width: 48px;
+                    border-radius: 8px;
+                    color: var(--text-white);
+                    background-color: var(--purple);
+                }
+            }
+
+            .gallery-wrapper {
+                display: flex;
+                gap: 16px;
+                padding: 24px 16px 16px;
+
+                .images, .walk-3d {
+                    flex: 1;
+                    padding: 50px 40px;
+                    background-color: red;
+                    border-radius: 8px;
+                }
+            }
+
+            .floor-info__image-wrapper {
+                display: none;
+
+                @media screen and (max-width: 1024px) {
+                    display: block;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
+    }
+}
 
 
 /* ----------footer----------- */
