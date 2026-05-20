@@ -1,6 +1,6 @@
 export const floors = [
     {
-        image: "Lodz -1.png",
+        image: "assets/images/drawings-lodz/Lodz -1.png",
         title: "Piętro -1",
         description: "Biznes Zone Łódź to przestrzenie biurowe na wynajem, w których znajdują się biura serwisowane, sale konferencyjne oraz coworkingi. W poziomie – 1 znajdziesz także nowoczesną salę eventową zaprojektowaną z myślą o szkoleniach, praktycznych warsztatach oraz konferencjach. Wygodne meble, miejsca do pracy zespołowej oraz inspirujący wystrój sprawiają, że każdy event staje się przestrzenią do realnego rozwoju.",
 
@@ -32,7 +32,7 @@ export const floors = [
         ]
     },
     {
-        image: "Lodz 0.png",
+        image: "assets/images/drawings-lodz/Lodz 0.png",
         title: "Piętro 0",
         description: "Biznes rozwoju. 00000000",
 
@@ -64,7 +64,7 @@ export const floors = [
         ]
     },
     {
-        image: "Lodz 1.png",
+        image: "assets/images/drawings-lodz/Lodz 1.png",
         title: "Piętro 1",
         description: "Biznes rozwoju. 11111111111",
 
@@ -116,7 +116,7 @@ export const floors = [
         ]
     },
     {
-        image: "Lodz 2.png",
+        image: "assets/images/drawings-lodz/Lodz 2.png",
         title: "Piętro 2",
         description: "Biznes rozwoju. 22222222222222",
 
@@ -164,7 +164,7 @@ export const floors = [
         ]
     },
     {
-        image: "Lodz 3.png",
+        image: "assets/images/drawings-lodz/Lodz 3.png",
         title: "Piętro 3",
         description: "Biznes rozwoju. 33333333",
 
@@ -216,7 +216,7 @@ export const floors = [
         ]
     },
     {
-        image: "Lodz 4.png",
+        image: "assets/images/drawings-lodz/Lodz 4.png",
         title: "Piętro 4",
         description: "Biznes rozwoju. 44444444444",
 
@@ -268,7 +268,7 @@ export const floors = [
         ]
     },
     {
-        image: "Lodz 5.png",
+        image: "assets/images/drawings-lodz/Lodz 5.png",
         title: "Piętro 5",
         description: "Biznes rozwoju. 55555555",
 

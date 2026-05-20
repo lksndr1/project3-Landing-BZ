@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="./assets/styles/global.css">
     <link rel="stylesheet" href="./assets/styles/styles.css">
 
-    <script defer src="./assets/scripts/script.js"></script>
+    <script type="module" src="./assets/scripts/script.js"></script>
 </head>
 <body id="top">
     <header>
@@ -208,6 +208,23 @@
         <section class="floors-section section-purple">
             <div class="container">
 
+                <div class="buttons">
+                    <button data-id="0">Piętro -1</button>
+                    <button data-id="1">Piętro 0</button>
+                    <button data-id="2">Piętro 1</button>
+                    <button data-id="3">Piętro 2</button>
+                    <button data-id="4">Piętro 3</button>
+                    <button data-id="5">Piętro 4</button>
+                    <button data-id="6">Piętro 5</button>
+                </div>
+
+                <img id="floorImage" src="" alt="floor image" />
+
+                <h2 id="floorTitle"></h2>
+
+                <p id="floorDescription"></p>
+
+                <div id="roomsList"></div>
             </div>
         </section>
 

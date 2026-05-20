@@ -19,3 +19,38 @@ accordionItems.forEach(item => {
         item.classList.toggle('active');
     });
 });
+
+// floors section
+import { floors } from './floors-data.js';
+const image = document.getElementById("floorImage");
+const title = document.getElementById("floorTitle");
+const description = document.getElementById("floorDescription");
+const roomsList = document.getElementById("roomsList");
+
+function renderFloor(index) {
+    const current = floors[index];
+
+    image.src = current.image;
+    title.textContent = current.title;
+    description.textContent = current.description;
+
+    roomsList.innerHTML = current.rooms
+        .map(room => `
+            <div class="room">
+                <span class="room-number">${room.number}</span>
+                <p class="room-name">${room.name}</p>
+            </div>
+        `)
+        .join("");
+}
+
+// buttons
+document.querySelectorAll(".buttons button").forEach(button => {
+    button.addEventListener("click", () => {
+        const index = Number(button.dataset.id);
+        renderFloor(index);
+    });
+});
+
+// init
+renderFloor(0);
