@@ -490,6 +490,68 @@ header {
     }
 }
 
+/* ----------spaces-section----------- */
+.spaces-section {
+    .gallery-large-flex-wrapper {
+        display: flex;
+        gap: 16px;
+        align-items: stretch;
+
+        .gallery-large-button-wrapper,
+        .gallery-medium-flex-wrapper {
+            flex: 1;
+            display: flex;
+        }
+
+        .gallery-large-button-wrapper {
+            button {
+                background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
+                url("../../assets/images/spaces-images/big-button.png") center / cover no-repeat;
+            }
+        }
+
+        .gallery-medium-flex-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            > button {
+                flex: 1;
+                background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
+                url("../../assets/images/spaces-images/medium-button.png") center / cover no-repeat;
+            }
+        }
+
+        .gallery-small-flex-wrapper {
+            display: flex;
+            gap: 16px;
+            flex: 1;
+
+            button {
+                flex: 1;
+            }
+
+            .left-button {
+                background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
+                url("../../assets/images/spaces-images/small-left-button.png") center / cover no-repeat;
+            }
+
+            .right-button {
+                background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
+                url("../../assets/images/spaces-images/small-right-button.png") center / cover no-repeat;
+            }
+        }
+
+        button {
+            width: 100%;
+            padding: 24px;
+            border-radius: 16px;
+
+
+        }
+    }
+}
+
 
 /* ----------footer----------- */
 footer {
