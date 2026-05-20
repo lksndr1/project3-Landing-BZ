@@ -34,7 +34,7 @@ export const floors = [
     {
         image: "assets/images/drawings-lodz/Lodz 0.png",
         title: "Piętro 0",
-        description: "Biznes rozwoju. 00000000",
+        description: "To piętro, na którym poznajesz Biznes Zone Łódź. Znajduje się tu recepcja, która zajmuje się sprawami oraz korespondencją naszych najemców. Znajdziesz tutaj wygodne sale konferencyjne na spotkania z klientami lub szkolenia, przestronną kuchnię oraz wygodne miejsce do pracy, kiedy tego potrzebujesz.",
 
         rooms: [
             {
@@ -66,7 +66,7 @@ export const floors = [
     {
         image: "assets/images/drawings-lodz/Lodz 1.png",
         title: "Piętro 1",
-        description: "Biznes rozwoju. 11111111111",
+        description: "Pierwsze piętro zajmują biura serwisowane dla mniejszych zespołów liczących od 2 do 6 osób. Dziesięć prywatnych gabinetów tworzy jedną przestrzeń, która pozwala na pracę w skupieniu i komforcie. Nasze biura są przestronne, w pełni wyposażone oraz gotowe do użytku pierwszego dnia najmu, a Ty możesz w pełni skupić się na pracy.",
 
         rooms: [
             {
@@ -118,7 +118,7 @@ export const floors = [
     {
         image: "assets/images/drawings-lodz/Lodz 2.png",
         title: "Piętro 2",
-        description: "Biznes rozwoju. 22222222222222",
+        description: "Drugie piętro to miejsce, gdzie spotykają się freelancerzy oraz przedsiębiorcy z różnych branż. Znajdziesz tu coworking w dwóch wersjach – podstawowej z 12 stanowiskami oraz VIP, w której mieszczą się 4 stanowiska. Na piętrze znajdują się również biura serwisowane dla zespołów różnej wielkości od 3 do 7 stanowisk, odpowiednie dla ambitnych startupów oraz firm.",
 
         rooms: [
             {
@@ -166,7 +166,7 @@ export const floors = [
     {
         image: "assets/images/drawings-lodz/Lodz 3.png",
         title: "Piętro 3",
-        description: "Biznes rozwoju. 33333333",
+        description: "Trzecie piętro zajmują biura serwisowane dla firm i zespołów liczących do 10 osób. To miejsce, gdzie toczy się zarówno praca projektowa, jak i spokojna praca indywidualna. Podobnie jak cały budynek, trzecie piętro to świeżo wyremontowana przestrzeń, projektowana z myślą o ergonomii, komforcie i inspiracji.",
 
         rooms: [
             {
@@ -218,7 +218,7 @@ export const floors = [
     {
         image: "assets/images/drawings-lodz/Lodz 4.png",
         title: "Piętro 4",
-        description: "Biznes rozwoju. 44444444444",
+        description: "Czwarte piętro to biura serwisowane przygotowane dla firm różnej wielkości. Prywatne gabinety mogą być przestrzenią do pracy zarówno dla dwóch osób, jak i miejscem dla kilkuosobowych zespołów projektowych. To przestronne miejsce w Biznes Zone Łódź z widokiem na industrialne budynki w ścisłym centrum Łodzi.",
 
         rooms: [
             {
@@ -270,7 +270,7 @@ export const floors = [
     {
         image: "assets/images/drawings-lodz/Lodz 5.png",
         title: "Piętro 5",
-        description: "Biznes rozwoju. 55555555",
+        description: "Najwyższe, piąte piętro Biznes Zone Łódź to przestronne biura serwisowane dla startupów i firm, a na piętrze znajduje się także wygodna kuchnia. Prywatne gabinety zostały zaprojektowane tak, aby pobudzać inspirację i zapewniać codzienny komfort pracownikom.",
 
         rooms: [
             {
