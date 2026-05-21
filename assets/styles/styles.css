@@ -726,11 +726,45 @@ header {
                 }
             }
         }
-
-
     }
 }
 
+/* ------appointment-section----------- */
+.appointment-section {
+    .appointment-section__content-wrapper {
+        color: var(--text-white);
+        text-align: center;
+        border-radius: 24px;
+        overflow: hidden;
+        border: 1px solid #CB35EB;
+        background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%), linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%),
+        url("../../assets/images/appointment-bg.jpg") lightgray 50% / cover no-repeat;
+        padding: 116px 0;
+
+        @media screen and (max-width: 1024px) {
+            padding: 116px 40px;
+            border-radius: 8px;
+        }
+
+        @media screen and (max-width: 767px) {
+            padding: 86px 16px;
+        }
+
+        h2 {
+            color: var(--text-white);
+            max-width: 628px;
+            margin: 0 auto;
+
+            @media screen and (max-width: 1024px) {
+                max-width: 100%;
+            }
+        }
+
+        p {
+            margin: 20px 0 32px;
+        }
+    }
+}
 
 /* ----------footer----------- */
 footer {
