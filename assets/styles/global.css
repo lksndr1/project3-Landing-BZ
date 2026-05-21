@@ -44,6 +44,12 @@ h2 {
     color: var(--text-black);
 }
 
+h4 {
+    font-size: 28px;
+    color: var(--text-black);
+    font-weight: 600;
+}
+
 h6 {
     font-family: Inter;
     font-size: 16px;

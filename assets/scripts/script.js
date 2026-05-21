@@ -66,3 +66,32 @@ buttons.forEach(button => {
 
 // init
 renderFloor(0);
+
+//faq-accordion
+import { faqData } from './faq-data.js';
+
+const container = document.getElementById("faq");
+
+faqData.forEach((item, index) => {
+    const wrapper = document.createElement("div");
+    wrapper.className = "faq-accordion-item";
+
+    wrapper.innerHTML = `
+    <h6 class="faq-accordion-item__heading">
+      ${item.title}
+    </h6>
+    <p class="faq-accordion-item__content">
+      ${item.content}
+    </p>
+  `;
+
+    if (index === 0) {
+        wrapper.classList.add("is-open");
+    }
+
+    wrapper.addEventListener("click", () => {
+        wrapper.classList.toggle("is-open");
+    });
+
+    container.appendChild(wrapper);
+});
