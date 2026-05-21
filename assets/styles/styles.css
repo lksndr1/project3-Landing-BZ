@@ -492,15 +492,32 @@ header {
 
 /* ----------spaces-section----------- */
 .spaces-section {
+    text-align: center;
+    color: var(--text-black);
+
     .gallery-large-flex-wrapper {
         display: flex;
         gap: 16px;
         align-items: stretch;
+        margin-top: 42px;
+
+        @media screen and (max-width: 1024px) {
+            flex-direction: column;
+        }
 
         .gallery-large-button-wrapper,
         .gallery-medium-flex-wrapper {
             flex: 1;
             display: flex;
+            min-height: 452px;
+
+            @media screen and (max-width: 1024px) {
+                min-height: 278px;
+            }
+
+            @media screen and (max-width: 767px) {
+                min-height: 204px;
+            }
         }
 
         .gallery-large-button-wrapper {
@@ -519,6 +536,10 @@ header {
                 flex: 1;
                 background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
                 url("../../assets/images/spaces-images/medium-button.png") center / cover no-repeat;
+
+                @media screen and (max-width: 767px) {
+                    min-height: 95px;
+                }
             }
         }
 
@@ -527,8 +548,16 @@ header {
             gap: 16px;
             flex: 1;
 
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+            }
+
             button {
                 flex: 1;
+
+                @media screen and (max-width: 767px) {
+                    min-height: 95px;
+                }
             }
 
             .left-button {
@@ -546,8 +575,7 @@ header {
             width: 100%;
             padding: 24px;
             border-radius: 16px;
-
-
+            border: 2px solid #CB35EB;
         }
     }
 }
