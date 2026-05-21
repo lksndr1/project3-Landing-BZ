@@ -830,6 +830,12 @@ footer {
                         border: 1.5px solid #B0B0B0;
                         border-radius: 8px;
 
+                        input {
+                            @media screen and (max-width: 767px) {
+                                max-width: 200px;
+                            }
+                        }
+
                         button {
                             color: var(--Brand-500);
                             padding: 8px 12px;
