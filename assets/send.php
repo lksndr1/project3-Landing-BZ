@@ -8,13 +8,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $phone      = htmlspecialchars(trim($_POST["phone"]));
     $message    = htmlspecialchars(trim($_POST["message"]));
 
-    $to = "olekpl90@gmail.com";
+    $to = "oleksandr.siczynski@twojstartup.pl";
     $subject = "New message from BZ-landing";
 
     $body = "
     Name: $first_name
 
-    Second name: $last_name
+    Last name: $last_name
 
     Email: $email
 
