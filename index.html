@@ -56,7 +56,7 @@
     <main>
         <section class="hero-section">
 <!--            add autoplay needed-->
-            <video  muted loop playsinline class="bg-video">
+            <video autoplay muted loop playsinline class="bg-video">
                 <source src="./assets/JC-Entrance.mp4" type="video/mp4">
             </video>
             <div class='container'>
@@ -65,14 +65,9 @@
                     <p>Nowoczesne biura serwisowane i coworking dla freelancerów, startupów oraz firm w centrum Łodzi. Znajdź przestrzeń dla siebie, umów konsultację i pracuj tak, jak lubisz.</p>
                     <div class="hero-section__form-container__form">
                         <form class="glass-form"
-                            action="https://api.web3forms.com/submit"
-                            method="POST"
+                              action="./assets/send.php"
+                              method="POST"
                         >
-                            <input
-                                type="hidden"
-                                name="access_key"
-                                value="6f3e2f57-9ab4-4482-bf54-5603c9e9e0c3"
-                            >
 
                             <div class="row">
                                 <div class="field">
@@ -116,7 +111,7 @@
                             </div>
 
                             <div class="checkbox">
-                                <input type="checkbox" name="agree" id="agree">
+                                <input type="checkbox" name="agree" id="agree" required>
                                 <label for="agree">
                                     Potwierdzam zgodność danych oraz akceptuję
                                     <a href="#">regulamin</a> i <a href="#">politykę prywatności</a>.
