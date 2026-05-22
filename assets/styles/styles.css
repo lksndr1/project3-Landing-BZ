@@ -523,7 +523,18 @@ header {
         .gallery-large-button-wrapper {
             button {
                 background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
-                url("../../assets/images/spaces-images/big-button.png") center / cover no-repeat;
+                url("../../assets/images/spaces-images/people-working-tech-brand-together 1.png") center / cover no-repeat;
+            }
+
+            button:hover {
+                background: linear-gradient(121deg, rgba(203, 53, 235, 0.08) 62.69%, rgba(34, 224, 178, 0.50) 93.58%),
+                url("../../assets/images/spaces-images/people-working-tech-brand-together 1.png") center / cover no-repeat;
+
+                svg {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
 
@@ -535,10 +546,21 @@ header {
             > button {
                 flex: 1;
                 background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
-                url("../../assets/images/spaces-images/medium-button.png") center / cover no-repeat;
+                url("../../assets/images/spaces-images/business-people-working-modern-office-space 1.png") center / cover no-repeat;
 
                 @media screen and (max-width: 767px) {
                     min-height: 95px;
+                }
+            }
+
+            > button:hover {
+                background: linear-gradient(121deg, rgba(203, 53, 235, 0.08) 62.69%, rgba(34, 224, 178, 0.50) 93.58%),
+                url("../../assets/images/spaces-images/business-people-working-modern-office-space 1.png") center / cover no-repeat;
+
+                svg {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
                 }
             }
         }
@@ -562,20 +584,65 @@ header {
 
             .left-button {
                 background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
-                url("../../assets/images/spaces-images/small-left-button.png") center / cover no-repeat;
+                url("../../assets/images/spaces-images/young-happy-businesswoman-relaxing-with-hands-head-day-dreaming-work-there-are-people-background 1.png") center / cover no-repeat;
+            }
+
+            .left-button:hover {
+                background: linear-gradient(121deg, rgba(203, 53, 235, 0.08) 62.69%, rgba(34, 224, 178, 0.50) 93.58%),
+                url("../../assets/images/spaces-images/young-happy-businesswoman-relaxing-with-hands-head-day-dreaming-work-there-are-people-background 1.png") center / cover no-repeat;
+
+                svg {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
 
             .right-button {
                 background: linear-gradient(136deg, rgba(203, 53, 235, 0.50) 6.66%, rgba(34, 224, 178, 0.50) 93.7%),
-                url("../../assets/images/spaces-images/small-right-button.png") center / cover no-repeat;
+                url("../../assets/images/spaces-images/young-caucasian-women-working-laptops-drinking-coffee 1.png") center / cover no-repeat;
+            }
+
+            .right-button:hover {
+                background: linear-gradient(121deg, rgba(203, 53, 235, 0.08) 62.69%, rgba(34, 224, 178, 0.50) 93.58%),
+                url("../../assets/images/spaces-images/young-caucasian-women-working-laptops-drinking-coffee 1.png") center / cover no-repeat;
+
+                svg {
+                    display: block;
+                    opacity: 1;
+                    visibility: visible;
+                }
             }
         }
 
         button {
             width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
             padding: 24px;
             border-radius: 16px;
             border: 2px solid #CB35EB;
+            color: var(--text-white);
+            font-size: 20px;
+            transition: padding 0.3s ease;
+
+            svg {
+                opacity: 0;
+                visibility: hidden;
+                width: 40px;
+                height: 40px;
+                padding: 8px;
+                border-radius: 999px;
+                background: rgba(255, 255, 255, 0.30);
+                transition:
+                        opacity 0.3s ease,
+                        visibility 0.3s ease;
+            }
+        }
+
+        button:hover {
+            padding: 24px 24px 28px 24px;
         }
     }
 }
