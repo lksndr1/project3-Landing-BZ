@@ -7,6 +7,11 @@ header {
     top: 40px;
     width: 100%;
     z-index: 10;
+    transition: transform 0.3s ease;
+}
+
+header.hide {
+    transform: translateY(-150%);
 }
 
 .header-wrapper {

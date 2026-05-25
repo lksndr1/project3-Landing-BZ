@@ -1,3 +1,20 @@
+// header hide
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        header.classList.add("hide");
+    } else {
+        header.classList.remove("hide");
+    }
+
+    lastScrollY = currentScrollY;
+});
+
 // header mobile-menu
 const toggle = document.querySelector('.header-wrapper__mobile-toggle');
 const menu = document.querySelector('.header-wrapper__mobile-menu');
