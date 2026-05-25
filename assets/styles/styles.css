@@ -1013,6 +1013,12 @@ footer {
 
             li {
                 margin-bottom: 12px;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            li:hover {
+                transform: scale(1.02);
             }
 
             .footer-flex-wrapper__menus__projects ul li {
