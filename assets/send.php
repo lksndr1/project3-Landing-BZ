@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
     if (mail($to, $subject, $body, $headers)) {
-        echo "Success send!";
+        echo "Success";
     } else {
         echo "Error during sending";
     }
