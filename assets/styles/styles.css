@@ -156,7 +156,23 @@ header.hide {
                 text-align: left;
                 margin-top: 32px;
 
+                #successMessage {
+                    text-align: center;
 
+                    h2 {
+                        margin-bottom: 24px;
+                        color: var(--text-white);
+                    }
+
+                    h2::before {
+                        background: none;
+                    }
+
+                    p {
+                        font-family: var(--secondary-font);
+                        margin-bottom: 24px;
+                    }
+                }
 
                 .glass-form {
                     color: #fff;
