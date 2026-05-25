@@ -106,7 +106,3 @@ h6 {
     border: 1.5px solid #EAE8FF;
     color: var(--bg-white);
 }
-
-main {
-    min-height: 200vh;
-}

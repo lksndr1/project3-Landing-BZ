@@ -157,12 +157,13 @@ header.hide {
                 margin-top: 32px;
 
                 .glass-form {
+                    color: #fff;
+                    font-weight: 500;
                     background: rgba(255, 255, 255, 0.15);
                     backdrop-filter: blur(15px);
                     border: 2px solid rgba(189, 189, 189, 0.40);
                     border-radius: 16px;
                     padding: 32px;
-                    color: #fff;
                 }
 
                 .row {
@@ -201,8 +202,8 @@ header.hide {
 
                 .input-icon span {
                     position: absolute;
-                    left: 10px;
-                    top: 50%;
+                    left: 16px;
+                    top: 53%;
                     transform: translateY(-50%);
                     opacity: 0.8;
                 }
@@ -213,17 +214,20 @@ header.hide {
 
                 .checkbox {
                     display: flex;
+                    align-items: center;
                     gap: 10px;
-                    font-size: 12px;
-                    margin: 10px 0;
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 24px 0;
+                    border-top: 1px solid #E7E7E7;
 
                     input {
                         width: unset;
                     }
-                }
 
-                .checkbox a {
-                    color: #a78bfa;
+                    a {
+                        text-decoration: underline;
+                    }
                 }
 
                 button {
@@ -236,6 +240,17 @@ header.hide {
                     font-size: 16px;
                     cursor: pointer;
                     transition: 0.3s;
+                }
+
+                button:hover {
+                    color: var(--purple);
+                    background: #D8D5FF;
+                }
+
+                button:active {
+                    color: var(--purple);
+                    background: #D8D5FF;
+                    border: 2px solid var(--purple);
                 }
             }
 
@@ -717,10 +732,17 @@ header.hide {
                     gap: 8px;
                     width: fit-content;
                     color: #9D958B;
+                    font-weight: 500;
                     padding: 8px 16px;
                     border-radius: 8px;
                     border: 2px solid #DAD7D3;
                     background: var(--bg-white);
+                    transition: color 0.3s ease, border-color 0.3s ease;
+                }
+
+                a:hover {
+                    color: var(--purple);
+                    border: 2px solid var(--purple);
                 }
             }
         }
