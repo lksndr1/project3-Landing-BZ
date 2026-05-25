@@ -523,11 +523,45 @@ header.hide {
                 gap: 16px;
                 padding: 24px 16px 16px;
 
+                @media screen and (max-width: 1024px) {
+                    padding: 16px 0;
+                }
+
                 .images, .walk-3d {
                     flex: 1;
-                    padding: 50px 40px;
-                    background-color: red;
+                    padding: 50px 0;
                     border-radius: 8px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    @media screen and (max-width: 767px) {
+                        font-size: 12px;
+                    }
+
+                    button {
+                        display: flex;
+                        gap: 4px;
+                        align-items: center;
+                        justify-content: center;
+                        width: fit-content;
+                        margin: 0 auto;
+                        background-color: transparent;
+                        color: var(--text-white);
+                        font-family: var(--secondary-font);
+                        padding: 8px;
+                        border-radius: 8px;
+                        border: 2px solid var(--text-white);
+                    }
+                }
+
+                .images {
+                    background: linear-gradient(0deg, rgba(10, 10, 10, 0.40) 0%, rgba(10, 10, 10, 0.40) 100%),
+                    url("../../assets/images/gallery-button-bg.jpg") lightgray 50% / cover no-repeat;
+                }
+
+                .walk-3d {
+                    background: linear-gradient(0deg, rgba(10, 10, 10, 0.40) 0%, rgba(10, 10, 10, 0.40) 100%),
+                    url("../../assets/images/3d-button-bg.png") lightgray 50% / cover no-repeat;
                 }
             }
 
