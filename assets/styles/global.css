@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     color: var(--text-gray);
     font-family: var(--third-font);
@@ -34,6 +38,8 @@ body {
 h1, h2 {
     font-family: var(--fourth-font);
     font-size: 48px;
+    display: inline-block;
+    position: relative;
 
     @media screen and (max-width: 767px) {
         font-size: 36px;
@@ -42,6 +48,29 @@ h1, h2 {
 
 h2 {
     color: var(--text-black);
+}
+
+h1::before, h2::before {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: -10px;
+    width: 55px;
+    height: 44px;
+    background-size: contain;
+
+    @media screen and (max-width: 767px) {
+        left: -8px;
+        top: -16px;
+    }
+}
+
+h1::before {
+    background: url("../images/white-heading-decoration.svg") no-repeat center;
+}
+
+h2::before {
+    background: url("../images/green-heading-decoration.svg") no-repeat center;
 }
 
 h4 {
@@ -64,8 +93,16 @@ h6 {
     border: 1.5px solid #EAE8FF;
     background: var(--bg-white);
     color: #BAB3FF;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-main {
-    min-height: 200vh;
+.button-b1:hover {
+    border: 1.5px solid var(--purple);
+    color: var(--purple)
+}
+
+.button-b1:active {
+    background: #BAB3FF;
+    border: 1.5px solid #EAE8FF;
+    color: var(--bg-white);
 }

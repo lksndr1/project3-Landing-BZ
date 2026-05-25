@@ -1,3 +1,20 @@
+// header hide
+let lastScrollY = window.scrollY;
+
+window.addEventListener("scroll", () => {
+    const header = document.querySelector("header");
+
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 50) {
+        header.classList.add("hide");
+    } else {
+        header.classList.remove("hide");
+    }
+
+    lastScrollY = currentScrollY;
+});
+
 // header mobile-menu
 const toggle = document.querySelector('.header-wrapper__mobile-toggle');
 const menu = document.querySelector('.header-wrapper__mobile-menu');
@@ -13,9 +30,17 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 //accordion
 const accordionItems = document.querySelectorAll('.accordion-item');
+
 accordionItems.forEach(item => {
     const button = item.querySelector('.accordion-header');
+
     button.addEventListener('click', () => {
+        accordionItems.forEach(el => {
+            if (el !== item) {
+                el.classList.remove('active');
+            }
+        });
+
         item.classList.toggle('active');
     });
 });
@@ -90,8 +115,39 @@ faqData.forEach((item, index) => {
     }
 
     wrapper.addEventListener("click", () => {
+        document.querySelectorAll(".faq-accordion-item").forEach(el => {
+            if (el !== wrapper) {
+                el.classList.remove("is-open");
+            }
+        });
+
         wrapper.classList.toggle("is-open");
     });
 
     container.appendChild(wrapper);
+});
+
+// form submit
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        body: data
+    })
+        .then(res => res.text())
+        .then(response => {
+            if (response.includes("Success")) {
+                form.style.display = "none";
+                document.getElementById("successMessage").style.display = "block";
+            } else {
+                alert("Error sending form");
+            }
+        })
+        .catch(() => {
+            alert("Server error");
+        });
 });
