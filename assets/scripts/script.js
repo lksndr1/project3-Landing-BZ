@@ -115,6 +115,12 @@ faqData.forEach((item, index) => {
     }
 
     wrapper.addEventListener("click", () => {
+        document.querySelectorAll(".faq-accordion-item").forEach(el => {
+            if (el !== wrapper) {
+                el.classList.remove("is-open");
+            }
+        });
+
         wrapper.classList.toggle("is-open");
     });
 
