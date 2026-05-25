@@ -93,6 +93,18 @@ h6 {
     border: 1.5px solid #EAE8FF;
     background: var(--bg-white);
     color: #BAB3FF;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.button-b1:hover {
+    border: 1.5px solid var(--purple);
+    color: var(--purple)
+}
+
+.button-b1:active {
+    background: #BAB3FF;
+    border: 1.5px solid #EAE8FF;
+    color: var(--bg-white);
 }
 
 main {

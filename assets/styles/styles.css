@@ -637,7 +637,7 @@ header.hide {
             border: 2px solid #CB35EB;
             color: var(--text-white);
             font-size: 20px;
-            transition: padding 0.3s ease;
+            transition: padding 0.3s ease, background 0.3s ease;
 
             svg {
                 opacity: 0;
