@@ -284,6 +284,10 @@ header.hide {
                     gap: 8px;
                 }
 
+                p {
+                    font-size: 16px;
+                }
+
                 span {
                     display: block;
                     width: 1px;
