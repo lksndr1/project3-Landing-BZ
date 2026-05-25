@@ -351,15 +351,18 @@ header.hide {
 
             .advantages-section__accordion {
                 .accordion-item {
-                    border-bottom: 2px solid rgba(0, 0, 0, 0.10);
                     padding: 24px 0;
+                }
+
+                .accordion-item:not(:last-child) {
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.10);
                 }
 
                 .accordion-header {
                     width: 100%;
                     background: transparent;
                     padding-bottom: 12px;
-                    color: var(--purple);
+                    color: #D8D5FF;
                     cursor: pointer;
                     display: flex;
                     gap: 12px;
@@ -371,7 +374,7 @@ header.hide {
                         width: 32px;
                         height: 32px;
                         border-radius: 5px;
-                        background-color: var(--purple);
+                        background-color: #D8D5FF;
                     }
                 }
 
@@ -423,6 +426,14 @@ header.hide {
 
                 .accordion-item.active .accordion-content {
                     max-height: 200px;
+                }
+
+                .accordion-item.active .accordion-header{
+                    color: var(--purple);
+
+                    .icon {
+                        background-color: var(--purple);
+                    }
                 }
             }
         }

@@ -30,9 +30,17 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 //accordion
 const accordionItems = document.querySelectorAll('.accordion-item');
+
 accordionItems.forEach(item => {
     const button = item.querySelector('.accordion-header');
+
     button.addEventListener('click', () => {
+        accordionItems.forEach(el => {
+            if (el !== item) {
+                el.classList.remove('active');
+            }
+        });
+
         item.classList.toggle('active');
     });
 });
