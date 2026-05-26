@@ -458,6 +458,11 @@ header.hide {
             border-radius: 8px;
             background-color: transparent;
             color: var(--text-black);
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #D8D5FF;
         }
 
         .active-button {
@@ -552,6 +557,12 @@ header.hide {
                         padding: 8px;
                         border-radius: 8px;
                         border: 2px solid var(--text-white);
+                        transition: 0.3s;
+                    }
+
+                    button:hover, a:hover, a:focus {
+                        border: 2px solid var(--text-purple);
+                        background-color: var(--purple);
                     }
                 }
 
