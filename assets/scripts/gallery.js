@@ -1,24 +1,35 @@
 const galleries = {
     office: [
-        "https://picsum.photos/id/1011/1200/800",
-        "https://picsum.photos/id/1015/1200/800",
-        "https://picsum.photos/id/1016/1200/800",
-        "https://picsum.photos/id/1020/1200/800",
-        "https://picsum.photos/id/1024/1200/800",
+        "assets/images/gallery-images/1.1.png",
+        "assets/images/gallery-images/1.2.png",
+        "assets/images/gallery-images/1.3.png",
+        "assets/images/gallery-images/1.4.png",
+        "assets/images/gallery-images/1.5.png",
+        "assets/images/gallery-images/1.6.png",
+        "assets/images/gallery-images/1.7.png",
+        "assets/images/gallery-images/1.8.png",
     ],
 
     coworking: [
-        "https://picsum.photos/id/1035/1200/800",
-        "https://picsum.photos/id/1037/1200/800",
-        "https://picsum.photos/id/1040/1200/800",
-        "https://picsum.photos/id/1041/1200/800",
+        "assets/images/gallery-images/c1.png",
+        "assets/images/gallery-images/c2.png",
+        "assets/images/gallery-images/c3.png",
+        "assets/images/gallery-images/c4.png",
+        "assets/images/gallery-images/c5.png",
+        "assets/images/gallery-images/c6.png",
+        "assets/images/gallery-images/c7.png",
+        "assets/images/gallery-images/c8.png",
     ],
 
     conference: [
-        "https://picsum.photos/id/1050/1200/800",
-        "https://picsum.photos/id/1052/1200/800",
-        "https://picsum.photos/id/1060/1200/800",
-        "https://picsum.photos/id/1068/1200/800",
+        "assets/images/gallery-images/B-D.png",
+        "assets/images/gallery-images/dB-B.png",
+        "assets/images/gallery-images/dB-K.png",
+        "assets/images/gallery-images/dB-Z.png",
+        "assets/images/gallery-images/E-1.png",
+        "assets/images/gallery-images/E-2.png",
+        "assets/images/gallery-images/E-3.png",
+        "assets/images/gallery-images/Z.png",
     ]
 };
 

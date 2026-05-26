@@ -1172,6 +1172,10 @@ button {
     display: flex;
     gap: 20px;
     height: 100%;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
 }
 
 /* MAIN IMAGE */
@@ -1220,12 +1224,23 @@ button {
     width: 260px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+    }
 }
 
 .tabs {
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .tab-btn {
@@ -1245,12 +1260,14 @@ button {
 
 .thumbnails {
     margin-top: 20px;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-
     overflow-y: auto;
+
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .thumbnail {
