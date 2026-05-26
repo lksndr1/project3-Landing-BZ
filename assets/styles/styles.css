@@ -97,6 +97,7 @@ header.hide {
             align-items: center;
             justify-content: space-between;
             margin-top: 16px;
+            font-size: 12px;
 
             .header-wrapper__mobile-menu__cta-container__phone {
                 display: flex;
@@ -442,7 +443,7 @@ header.hide {
 
 /* ----------floors-section----------- */
 .floors-section {
-    .buttons {
+    .floors-section__buttons {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -457,6 +458,7 @@ header.hide {
             padding: 12px;
             border-radius: 8px;
             background-color: transparent;
+            color: var(--text-black);
         }
 
         .active-button {
@@ -580,6 +582,78 @@ header.hide {
 
         @media screen and (max-width: 1024px) {
             flex-direction: column;
+        }
+    }
+
+/*    --------Mobile dropdown ---------------*/
+
+    .floor-dropdown {
+        display: none;
+    }
+
+    @media (max-width: 767px) {
+
+        .floors-section__buttons {
+            display: none;
+        }
+
+        .floor-dropdown {
+            display: block;
+            position: relative;
+            width: 100%;
+            margin-bottom: 42px;
+        }
+
+        .floors-section__dropdown-toggle {
+            width: 100%;
+            background-color: var(--purple);
+            color: var(--text-white);
+            border: none;
+            border-radius: 16px;
+            padding: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+        }
+
+        .arrow {
+            transition: transform .3s ease;
+        }
+
+        .floor-dropdown.open .arrow {
+            transform: rotate(180deg);
+        }
+
+        .floors-section__dropdown__buttons {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            background: #F4F3FF;
+            box-shadow: 0 2px 12px 0 rgba(195, 195, 195, 0.15);
+            border-radius: 0 0 18px 18px;
+            overflow: hidden;
+            z-index: 100;
+        }
+
+        .floor-dropdown.open .floors-section__dropdown__buttons {
+            display: flex;
+        }
+
+        .floors-section__dropdown__buttons button {
+            background: transparent;
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            color: #7A7A7A;
+        }
+
+        .floors-section__dropdown__buttons button.active-button {
+            display: none;
         }
     }
 }
@@ -1101,27 +1175,6 @@ footer {
 }
 
 /* ------------------------gallery-------------------------*/
-/* ========= BASE ========= */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
-}
-
-button {
-    cursor: pointer;
-    font-family: inherit;
-}
-
-img {
-    display: block;
-}
-
 /* ========= OPEN BUTTONS ========= */
 
 .buttons {
@@ -1146,11 +1199,9 @@ img {
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,.65);
-
     display: none;
     align-items: center;
     justify-content: center;
-
     z-index: 999;
 }
 
@@ -1161,13 +1212,10 @@ img {
 .popup-content {
     width: calc(100% - 24px);
     height: calc(100dvh - 24px);
-
     background: #555;
     border-radius: 18px;
-
     padding: 18px;
     position: relative;
-
     overflow: hidden;
 }
 
@@ -1177,18 +1225,13 @@ img {
     position: absolute;
     top: 10px;
     right: 10px;
-
     width: 40px;
     height: 40px;
-
     border: none;
     border-radius: 50%;
-
     background: rgba(255,255,255,.1);
     color: white;
-
     font-size: 26px;
-
     z-index: 20;
 }
 
@@ -1206,7 +1249,6 @@ img {
     position: relative;
     flex: 1;
     min-width: 0;
-
     border-radius: 14px;
     overflow: hidden;
 }
@@ -1222,18 +1264,13 @@ img {
 .nav {
     position: absolute;
     bottom: 18px;
-
     width: 42px;
     height: 42px;
-
     border-radius: 50%;
     border: 1px solid rgba(255,255,255,.5);
-
     background: rgba(0,0,0,.35);
     color: white;
-
     font-size: 22px;
-
     backdrop-filter: blur(6px);
 }
 
@@ -1451,6 +1488,4 @@ img {
         min-width: max-content;
         padding-inline: 14px;
     }
-
-
 }
