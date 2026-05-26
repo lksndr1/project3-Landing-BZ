@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
 
     <script type="module" src="./assets/scripts/script.js"></script>
+    <script type="module" src="./assets/scripts/gallery.js"></script>
 </head>
 <body id="top">
     <header>
@@ -271,7 +272,7 @@
                 <p>Czy tutaj będzie jakiś tekst po najechaniu? Mogę dać jedno-dwa zdania o usługach</p>
                 <div class="gallery-large-flex-wrapper">
                     <div class="gallery-large-button-wrapper">
-                        <button>
+                        <button class="open-gallery" data-gallery="office">
                             Biura serwisowane
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -280,7 +281,7 @@
                         </button>
                     </div>
                     <div class="gallery-medium-flex-wrapper">
-                        <button>
+                        <button class="open-gallery" data-gallery="coworking">
                             Coworking
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -288,8 +289,8 @@
                             </svg>
                         </button>
                         <div class="gallery-small-flex-wrapper">
-                            <button class="left-button">
-                                Hot Desk
+                            <button class="left-button open-gallery" data-gallery="conference">
+                                Sale konferencyjne
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M7 7H17V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -305,6 +306,39 @@
                         </div>
                     </div>
                 </div>
+
+<!--                ------------------gallery-popup---------------------->
+                <div class="popup" id="galleryPopup">
+                    <div class="popup-content">
+                        <button class="close-btn">&times;</button>
+                        <div class="gallery-layout">
+                            <!-- LEFT -->
+                            <div class="main-gallery">
+                                <img id="mainImage" src="" alt="">
+                                <button class="nav prev">&#10094;</button>
+                                <button class="nav next">&#10095;</button>
+                            </div>
+                            <!-- RIGHT -->
+                            <div class="sidebar">
+                                <div class="tabs">
+                                    <button class="tab-btn active" data-gallery="office">
+                                        Biura serwisowane
+                                    </button>
+                                    <button class="tab-btn" data-gallery="coworking">
+                                        Coworking
+                                    </button>
+                                    <button class="tab-btn" data-gallery="conference">
+                                        Sale konferencyjne
+                                    </button>
+                                </div>
+                                <div class="thumbnails" id="thumbnails"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                -------------------gallery-popup-END-------------------->
+
             </div>
         </section>
 
