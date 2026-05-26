@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./assets/styles/styles.css">
 
     <script type="module" src="./assets/scripts/script.js"></script>
+    <script type="module" src="./assets/scripts/gallery.js"></script>
 </head>
 <body id="top">
     <header>
@@ -234,7 +235,7 @@
 
                         <div class="gallery-wrapper">
                             <div class="images">
-                                <button>
+                                <button class="open-gallery" data-gallery="office">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <g clip-path="url(#clip0_3713_2792)">
                                             <path d="M17.737 3.5C17.461 2.488 16.592 1.757 15.5005 1.6785C14.2225 1.5865 12.3325 1.5 9.75 1.5C7.183 1.5 5.301 1.5855 4.0235 1.677C2.745 1.768 1.7675 2.745 1.6765 4.024C1.585 5.3015 1.5 7.184 1.5 9.75C1.5 12.3325 1.587 14.222 1.6785 15.5C1.757 16.5915 2.4885 17.461 3.5 17.7365" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -251,12 +252,12 @@
                                 </button>
                             </div>
                             <div class="walk-3d">
-                                <button>
+                                <a href="https://kuula.co/share/collection/7Mn2B?logo=1&info=0&logosize=150&fs=1&vr=1&initload=0&thumbs=-1" target="_blank">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <path d="M9 20L7.6 18.6L9.35 16.8C7.21667 16.5167 5.45833 15.9333 4.075 15.05C2.69167 14.1667 2 13.15 2 12C2 10.6167 2.96267 9.43767 4.888 8.463C6.81333 7.48833 9.184 7.00067 12 7C14.816 6.99933 17.187 7.487 19.113 8.463C21.039 9.439 22.0013 10.618 22 12C22 13.0333 21.446 13.9583 20.338 14.775C19.23 15.5917 17.784 16.2 16 16.6V14.55C17.2833 14.2167 18.271 13.8043 18.963 13.313C19.655 12.8217 20.0007 12.384 20 12C20 11.4667 19.2877 10.8333 17.863 10.1C16.4383 9.36667 14.484 9 12 9C9.516 9 7.56167 9.36667 6.137 10.1C4.71233 10.8333 4 11.4667 4 12C4 12.4 4.425 12.8793 5.275 13.438C6.125 13.9967 7.33333 14.4173 8.9 14.7L7.6 13.4L9 12L13 16L9 20Z" fill="white"/>
                                     </svg>
                                     3D spacer
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -271,7 +272,7 @@
                 <p>Czy tutaj będzie jakiś tekst po najechaniu? Mogę dać jedno-dwa zdania o usługach</p>
                 <div class="gallery-large-flex-wrapper">
                     <div class="gallery-large-button-wrapper">
-                        <button>
+                        <button class="open-gallery" data-gallery="office">
                             Biura serwisowane
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -280,7 +281,7 @@
                         </button>
                     </div>
                     <div class="gallery-medium-flex-wrapper">
-                        <button>
+                        <button class="open-gallery" data-gallery="coworking">
                             Coworking
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -288,23 +289,56 @@
                             </svg>
                         </button>
                         <div class="gallery-small-flex-wrapper">
-                            <button class="left-button">
-                                Hot Desk
+                            <button class="left-button open-gallery" data-gallery="conference">
+                                Sale konferencyjne
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M7 7H17V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </button>
-                            <button class="right-button">
+                            <a class="right-button" href="https://biznes-zone.com/biura-wirtualne-kontakt/?city=Rzesz%C3%B3w&title=Biuro%20wirtualne" target="_blank">
                                 Wirtualne biura
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     <path d="M7 7H17V17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
+
+<!--                ------------------gallery-popup---------------------->
+                <div class="popup" id="galleryPopup">
+                    <div class="popup-content">
+                        <button class="close-btn">&times;</button>
+                        <div class="gallery-layout">
+                            <!-- LEFT -->
+                            <div class="main-gallery">
+                                <img id="mainImage" src="" alt="">
+                                <button class="nav prev">&#10094;</button>
+                                <button class="nav next">&#10095;</button>
+                            </div>
+                            <!-- RIGHT -->
+                            <div class="sidebar">
+                                <div class="tabs">
+                                    <button class="tab-btn active" data-gallery="office">
+                                        Biura serwisowane
+                                    </button>
+                                    <button class="tab-btn" data-gallery="coworking">
+                                        Coworking
+                                    </button>
+                                    <button class="tab-btn" data-gallery="conference">
+                                        Sale konferencyjne
+                                    </button>
+                                </div>
+                                <div class="thumbnails" id="thumbnails"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!--                -------------------gallery-popup-END-------------------->
+
             </div>
         </section>
 
