@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message    = htmlspecialchars(trim($_POST["message"]));
 
     $to = "oleksandr.siczynski@twojstartup.pl";
-    $subject = "New message from BZ-landing";
+    $subject = "New message from BZ-landing-Lodz";
 
     $body = "
     Name: $first_name

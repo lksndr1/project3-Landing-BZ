@@ -53,17 +53,32 @@ const imagemobile = document.getElementById("floorImageMobile");
 const title = document.getElementById("floorTitle");
 const description = document.getElementById("floorDescription");
 const roomsList = document.getElementById("roomsList");
-
-const buttons = document.querySelectorAll(".buttons button");
+const desktopButtons = document.querySelectorAll(
+    ".floors-section__buttons button"
+);
+const mobileButtons = document.querySelectorAll(
+    ".floors-section__dropdown__buttons button"
+);
+const dropdown = document.querySelector(".floor-dropdown");
+const dropdownToggle = document.querySelector(
+    ".floors-section__dropdown-toggle"
+);
 
 function setActiveButton(index) {
-    buttons.forEach(btn => btn.classList.remove("active-button"));
-    buttons[index].classList.add("active-button");
+    desktopButtons.forEach(btn => {
+        btn.classList.remove("active-button");
+    });
+    desktopButtons[index].classList.add("active-button");
+    mobileButtons.forEach(btn => {
+        btn.classList.remove("active-button");
+    });
+    mobileButtons[index].classList.add("active-button");
+    dropdownToggle.childNodes[0].nodeValue =
+        mobileButtons[index].textContent + " ";
 }
 
 function renderFloor(index) {
     const current = floors[index];
-
     image.src = current.image;
     imagemobile.src = current.image;
     title.textContent = current.title;
@@ -79,17 +94,26 @@ function renderFloor(index) {
         .join("");
 
     setActiveButton(index);
+    dropdown.classList.remove("open");
 }
 
-// buttons
-buttons.forEach(button => {
+dropdownToggle.addEventListener("click", () => {
+    dropdown.classList.toggle("open");
+});
+
+desktopButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
-        const index = Number(button.dataset.id);
+        renderFloor(index);
+    });
+
+});
+
+mobileButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
         renderFloor(index);
     });
 });
 
-// init
 renderFloor(0);
 
 //faq-accordion
@@ -102,9 +126,9 @@ faqData.forEach((item, index) => {
     wrapper.className = "faq-accordion-item";
 
     wrapper.innerHTML = `
-    <h6 class="faq-accordion-item__heading">
+    <h5 class="faq-accordion-item__heading">
       ${item.title}
-    </h6>
+    </h5>
     <p class="faq-accordion-item__content">
       ${item.content}
     </p>

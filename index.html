@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biznes Zone</title>
+    <meta name="description" content="Biura na wynajem & coworking Biznes Zone Łódż. Miejsce do pracy, przestrzeń do rozwoju">
+    <title>Biznes Zone Łódż</title>
 
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
@@ -23,6 +24,9 @@
 
     <script type="module" src="./assets/scripts/script.js"></script>
     <script type="module" src="./assets/scripts/gallery.js"></script>
+    <!-- Start cookieyes banner -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/0a7380b7c01f262ce37b1a8ef1ea4967/script.js"></script>
+    <!-- End cookieyes banner -->
 </head>
 <body id="top">
     <header>
@@ -42,7 +46,7 @@
                     <span></span>
                 </div>
                 <div class="header-wrapper__mobile-menu">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.624959418681!2d19.4555924!3d51.758181199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34d65fc2f1b9%3A0xa5cb4e19d2b59365!2zQWwuIFRhZGV1c3phIEtvxZtjaXVzemtpIDEwMSwgOTAtNDQxIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1779097360904!5m2!1spl!2spl" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title="Google Maps location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.624959418681!2d19.4555924!3d51.758181199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34d65fc2f1b9%3A0xa5cb4e19d2b59365!2zQWwuIFRhZGV1c3phIEtvxZtjaXVzemtpIDEwMSwgOTAtNDQxIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1779097360904!5m2!1spl!2spl" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     <div class="header-wrapper__mobile-menu__cta-container">
                         <a href="tel:+48123456789" class="header-wrapper__mobile-menu__cta-container__phone">
                             <img src="./assets/images/phone-icon.png" alt="phone" />
@@ -57,7 +61,7 @@
     <main>
         <section class="hero-section" id="hero-section">
 <!--            add autoplay needed-->
-            <video autoplay muted loop playsinline class="bg-video">
+            <video autoplay muted loop playsinline class="bg-video" preload="auto" fetchpriority="high">
                 <source src="./assets/0_Discussion_Setting_3840x2160-bz.mp4" type="video/mp4">
             </video>
             <div class='container'>
@@ -121,7 +125,7 @@
                                 <input type="checkbox" name="agree" id="agree" required>
                                 <label for="agree">
                                     Potwierdzam zgodność danych oraz akceptuję
-                                    <a href="#">regulamin</a> i <a href="#">politykę prywatności</a>.
+                                    <a href="assets/documents/TS-Regulamin-od-2026.06.01.pdf" target="_blank">regulamin</a> i <a href="https://biznes-zone.com/polityka-prywatnosci/" target="_blank">politykę prywatności</a>.
                                 </label>
                             </div>
                             <button type="submit">Wyślij wiadomość</button>
@@ -136,7 +140,7 @@
                     </div>
                 </div>
                 <div class="hero-section__map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.624959418681!2d19.4555924!3d51.758181199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34d65fc2f1b9%3A0xa5cb4e19d2b59365!2zQWwuIFRhZGV1c3phIEtvxZtjaXVzemtpIDEwMSwgOTAtNDQxIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1779097360904!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title="Google Maps location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2469.624959418681!2d19.4555924!3d51.758181199999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471a34d65fc2f1b9%3A0xa5cb4e19d2b59365!2zQWwuIFRhZGV1c3phIEtvxZtjaXVzemtpIDEwMSwgOTAtNDQxIMWBw7Nkxbo!5e0!3m2!1spl!2spl!4v1779097360904!5m2!1spl!2spl" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </section>
@@ -209,7 +213,30 @@
         <section class="floors-section section-purple">
             <div class="container">
 
-                <div class="buttons">
+<!--                mobile dropdown -->
+                <div class="floor-dropdown">
+                    <button class="floors-section__dropdown-toggle">
+                        Piętro -1
+                        <span class="arrow">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="none">
+                                <path d="M0.75 0.75L6.75 6.75L12.75 0.75" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </button>
+
+                    <div class="floors-section__dropdown__buttons">
+                        <button data-id="0" class="active-button">Piętro -1</button>
+                        <button data-id="1">Piętro 0</button>
+                        <button data-id="2">Piętro 1</button>
+                        <button data-id="3">Piętro 2</button>
+                        <button data-id="4">Piętro 3</button>
+                        <button data-id="5">Piętro 4</button>
+                        <button data-id="6">Piętro 5</button>
+                    </div>
+                </div>
+
+<!--                desktop buttons -->
+                <div class="floors-section__buttons">
                     <button data-id="0">Piętro -1</button>
                     <button data-id="1">Piętro 0</button>
                     <button data-id="2">Piętro 1</button>
@@ -348,9 +375,9 @@
                     <div class="faq-section__flex-wrapper__heading-video">
                         <h2>Często zadawane pytania</h2>
                         <p>Znajdź odpowiedzi na najczęstsze pytania naszych klientów.</p>
-                        <div class="video-wrapper">
-                            <iframe src="https://www.youtube.com/embed/Tc4AhRK5Z9o?si=WzG-KFTaGHWoPE7h&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
+<!--                        <div class="video-wrapper">-->
+<!--                            <iframe title="Biznes Zone video" src="https://www.youtube.com/embed/Tc4AhRK5Z9o?si=WzG-KFTaGHWoPE7h&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+<!--                        </div>-->
                         <div class="faq-section__flex-wrapper__heading-video__faq-contact-us">
                             <h4>Masz więcej pytań?</h4>
                             <p>Napisz do nas, a rozwiejemy Twoje wątpliwości.</p>
@@ -454,7 +481,7 @@
                         <h6>Menu</h6>
                         <ul>
                             <li><a href="https://biznes-zone.com/" target="_blank">Biznes Zone</a></li>
-                            <li><a href="https://biznes-zone.com/location/warszawa/" target="_blank">Lokalizacje</a></li>
+                            <li><a href="https://biznes-zone.com/location/lodz/" target="_blank">Lokalizacje</a></li>
                             <li><a href="https://biznes-zone.com/blog/" target="_blank">Blog</a></li>
                             <li><a href="https://biznes-zone.com/kontakt/" target="_blank">Kontakt</a></li>
                             <li><a href="https://biznes-zone.com/uslugi-dodatkowe/" target="_blank">Usługi dodatkowe</a></li>
@@ -480,8 +507,8 @@
                 <p>Copyright &copy; <span id="year"></span> Biznes-zone.com</p>
                 <div class="footer-copyright__doc-wrapper">
                     <a href="assets/documents/TS-Regulamin-od-2026.06.01.pdf" target="_blank">Regulamin</a>
-                    <a href="">Polityka prywatności</a>
-                    <a href="">Polityka Cookies</a>
+                    <a href="https://biznes-zone.com/polityka-prywatnosci/" target="_blank">Polityka prywatności</a>
+                    <a href="https://biznes-zone.com/polityka-cookies/" target="_blank">Polityka Cookies</a>
                 </div>
             </div>
         </div>
