@@ -57,16 +57,28 @@ openButtons.forEach(btn => {
 function openPopup() {
     popup.classList.add("active");
 
+    document.body.classList.add("no-scroll");
+
     updateTabs();
     renderGallery();
 }
 
 /* CLOSE */
 
+function closePopup() {
+    popup.classList.remove("active");
+
+    document.body.classList.remove("no-scroll");
+}
+
 document.querySelector(".close-btn")
-    .addEventListener("click", () => {
-        popup.classList.remove("active");
-    });
+    .addEventListener("click", closePopup);
+
+popup.addEventListener("click", (e) => {
+    if(e.target === popup) {
+        closePopup();
+    }
+});
 
 /* TABS */
 

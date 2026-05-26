@@ -1101,6 +1101,8 @@ footer {
 }
 
 /* ------------------------gallery-------------------------*/
+/* ========= BASE ========= */
+
 * {
     box-sizing: border-box;
 }
@@ -1111,28 +1113,45 @@ body {
     background: #f4f4f4;
 }
 
-.buttons {
-    padding: 40px;
-    display: flex;
-    gap: 15px;
-}
-
 button {
     cursor: pointer;
+    font-family: inherit;
 }
 
-/* POPUP */
+img {
+    display: block;
+}
+
+/* ========= OPEN BUTTONS ========= */
+
+.buttons {
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.buttons button {
+    border: none;
+    border-radius: 10px;
+    background: #6c3cf0;
+    color: white;
+    padding: 14px 18px;
+    font-size: 15px;
+}
+
+/* ========= POPUP ========= */
 
 .popup {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,.6);
+    background: rgba(0,0,0,.65);
 
     display: none;
     align-items: center;
     justify-content: center;
 
-    z-index: 1000;
+    z-index: 999;
 }
 
 .popup.active {
@@ -1140,152 +1159,298 @@ button {
 }
 
 .popup-content {
-    width: 95%;
-    max-width: 1400px;
-    height: 90vh;
+    width: calc(100% - 24px);
+    height: calc(100dvh - 24px);
 
     background: #555;
-    border-radius: 16px;
+    border-radius: 18px;
 
-    padding: 20px;
+    padding: 18px;
     position: relative;
+
+    overflow: hidden;
 }
+
+/* ========= CLOSE ========= */
 
 .close-btn {
     position: absolute;
     top: 10px;
     right: 10px;
 
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
 
     border: none;
     border-radius: 50%;
 
-    background: transparent;
+    background: rgba(255,255,255,.1);
     color: white;
 
-    font-size: 28px;
+    font-size: 26px;
+
+    z-index: 20;
 }
+
+/* ========= LAYOUT ========= */
 
 .gallery-layout {
     display: flex;
-    gap: 20px;
+    gap: 18px;
     height: 100%;
-
-    @media screen and (max-width: 1024px) {
-        flex-direction: column;
-    }
 }
 
-/* MAIN IMAGE */
+/* ========= MAIN IMAGE ========= */
 
 .main-gallery {
-    flex: 1;
     position: relative;
+    flex: 1;
+    min-width: 0;
+
+    border-radius: 14px;
     overflow: hidden;
-    border-radius: 12px;
 }
 
 .main-gallery img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 12px;
 }
+
+/* ========= NAVIGATION ========= */
 
 .nav {
     position: absolute;
-    bottom: 20px;
+    bottom: 18px;
 
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
     border-radius: 50%;
-    border: 1px solid white;
+    border: 1px solid rgba(255,255,255,.5);
 
-    background: rgba(0,0,0,.4);
+    background: rgba(0,0,0,.35);
     color: white;
 
     font-size: 22px;
+
+    backdrop-filter: blur(6px);
 }
 
 .prev {
-    left: 20px;
+    left: 18px;
 }
 
 .next {
-    right: 20px;
+    right: 18px;
 }
 
-/* SIDEBAR */
+/* ========= SIDEBAR ========= */
 
 .sidebar {
     width: 260px;
+
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
 
-    @media screen and (max-width: 1024px) {
-        width: 100%;
-    }
+    flex-shrink: 0;
 }
+
+/* ========= TABS ========= */
 
 .tabs {
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-    @media screen and (max-width: 1024px) {
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
 }
 
 .tab-btn {
     border: none;
-    padding: 14px;
     border-radius: 10px;
 
     background: #6c3cf0;
     color: white;
 
+    padding: 14px 12px;
+
+    font-size: 14px;
+
     transition: .2s;
 }
 
 .tab-btn.active {
-    background: #8a5cff;
+    background: #8f67ff;
 }
 
+/* ========= THUMBNAILS ========= */
+
 .thumbnails {
-    margin-top: 20px;
+    margin-top: 16px;
+
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    overflow-y: auto;
 
-    @media screen and (max-width: 1024px) {
-        grid-template-columns: repeat(4, 1fr);
-    }
+    overflow-y: auto;
+    padding-right: 4px;
 }
 
 .thumbnail {
-    position: relative;
     cursor: pointer;
 }
 
 .thumbnail img {
     width: 100%;
     aspect-ratio: 1/1;
+
     object-fit: cover;
 
     border-radius: 12px;
-    opacity: .7;
+
+    opacity: .55;
     transition: .2s;
 }
 
 .thumbnail.active img {
     opacity: 1;
     border: 2px solid white;
+}
+
+/* ========= TABLET ========= */
+
+@media (max-width: 992px) {
+
+    .gallery-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .tabs {
+        flex-direction: row;
+    }
+
+    .tab-btn {
+        flex: 1;
+        font-size: 13px;
+        padding: 12px 10px;
+    }
+
+    .main-gallery {
+        height: 55vh;
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(4, 1fr);
+        max-height: 180px;
+    }
+}
+
+/* ========= MOBILE ========= */
+
+@media (max-width: 768px) {
+
+    .popup-content {
+        width: 100%;
+        height: 100dvh;
+
+        border-radius: 0;
+        padding: 12px;
+    }
+
+    .gallery-layout {
+        gap: 12px;
+    }
+
+    .main-gallery {
+        height: 42vh;
+        border-radius: 12px;
+    }
+
+    .main-gallery img {
+        border-radius: 12px;
+    }
+
+    .tabs {
+        gap: 8px;
+    }
+
+    .tab-btn {
+        border-radius: 8px;
+
+        font-size: 12px;
+        padding: 10px 8px;
+
+        white-space: nowrap;
+    }
+
+    .thumbnails {
+        margin-top: 12px;
+
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+
+        overflow-y: auto;
+        max-height: unset;
+    }
+
+    .thumbnail img {
+        border-radius: 10px;
+    }
+
+    .nav {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+        bottom: 12px;
+    }
+
+    .prev {
+        left: 12px;
+    }
+
+    .next {
+        right: 12px;
+    }
+
+    .close-btn {
+        top: 8px;
+        right: 8px;
+    }
+}
+
+/* ========= SMALL MOBILE ========= */
+
+@media (max-width: 480px) {
+
+    .buttons {
+        padding: 16px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    .main-gallery {
+        height: 36vh;
+    }
+
+    .tabs {
+        overflow-x: auto;
+        padding-bottom: 2px;
+    }
+
+    .tabs::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    .tab-btn {
+        flex: unset;
+        min-width: max-content;
+        padding-inline: 14px;
+    }
+
+
 }
