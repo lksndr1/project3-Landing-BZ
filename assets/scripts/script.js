@@ -126,9 +126,9 @@ faqData.forEach((item, index) => {
     wrapper.className = "faq-accordion-item";
 
     wrapper.innerHTML = `
-    <h6 class="faq-accordion-item__heading">
+    <h5 class="faq-accordion-item__heading">
       ${item.title}
-    </h6>
+    </h5>
     <p class="faq-accordion-item__content">
       ${item.content}
     </p>
