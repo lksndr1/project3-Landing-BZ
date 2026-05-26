@@ -421,7 +421,6 @@ header.hide {
                 }
 
                 .accordion-content p {
-                    color: #ccc;
                     line-height: 1.5;
                 }
 
@@ -836,7 +835,7 @@ header.hide {
             }
 
             >p {
-                margin: 24px 0 48px;
+                margin-top: 24px;
             }
 
             .video-wrapper {
@@ -854,6 +853,7 @@ header.hide {
 
             .faq-section__flex-wrapper__heading-video__faq-contact-us {
                 padding: 24px;
+                margin-top: 12px;
                 border-radius: 24px;
                 background: var(--bg-white);
                 box-shadow: 0 4px 16px 0 rgba(210, 210, 210, 0.15);
