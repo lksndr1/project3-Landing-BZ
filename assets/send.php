@@ -1,40 +1,108 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    exit("Method Not Allowed");
+}
 
-    $first_name = htmlspecialchars(trim($_POST["first_name"]));
-    $last_name  = htmlspecialchars(trim($_POST["last_name"]));
-    $email      = htmlspecialchars(trim($_POST["email"]));
-    $phone      = htmlspecialchars(trim($_POST["phone"]));
-    $message    = htmlspecialchars(trim($_POST["message"]));
+/*
+Start Turnstile verification
+*/
 
-    $to = "biuro@biznes-zone.com";
-    $subject = "New message from BZ-landing-Lodz";
+$turnstile_secret = "0x4AAAAAADXNILlF1rACWmlWlP8QNlxEDoY";
 
-    $body = "
-    Name: $first_name
+$turnstile_response = $_POST['cf-turnstile-response'] ?? '';
 
-    Last name: $last_name
+if (empty($turnstile_response)) {
+    exit("Captcha required");
+}
 
-    Email: $email
+$verify_data = [
+    'secret' => $turnstile_secret,
+    'response' => $turnstile_response,
+    'remoteip' => $_SERVER['REMOTE_ADDR']
+];
 
-    Phone: $phone
+$ch = curl_init();
 
-    Message:
-    $message
-    ";
+curl_setopt_array($ch, [
+    CURLOPT_URL => 'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => http_build_query($verify_data)
+]);
 
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$response = curl_exec($ch);
 
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Success";
-    } else {
-        echo "Error during sending";
-    }
+curl_close($ch);
 
+$result = json_decode($response, true);
+
+if (!$result['success']) {
+    http_response_code(400);
+    exit("Captcha verification failed");
+}
+
+/*
+End Turnstile verification
+*/
+
+$first_name = trim($_POST["first_name"] ?? '');
+$last_name  = trim($_POST["last_name"] ?? '');
+$email      = trim($_POST["email"] ?? '');
+$phone      = trim($_POST["phone"] ?? '');
+$message    = trim($_POST["message"] ?? '');
+
+if (
+    empty($first_name) ||
+    empty($email) ||
+    empty($phone)
+) {
+    http_response_code(400);
+    exit("Please fill required fields");
+}
+
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    exit("Invalid email");
+}
+
+$email = str_replace(["\r", "\n"], '', $email);
+
+$to = "oleksandr.siczynski@twojstartup.pl";
+$subject = "New message from BZ-landing-Lodz";
+
+$body = <<<TEXT
+Name: $first_name
+
+Last name: $last_name
+
+Email: $email
+
+Phone: $phone
+
+Message:
+$message
+TEXT;
+
+$headers = [];
+$headers[] = "From: no-reply@biznes-zone.com";
+$headers[] = "Reply-To: $email";
+$headers[] = "Content-Type: text/plain; charset=UTF-8";
+
+$headers_string = implode("\r\n", $headers);
+
+$success = mail(
+    $to,
+    $subject,
+    $body,
+    $headers_string
+);
+
+if ($success) {
+    echo "Success";
 } else {
-    echo "Fault";
+    http_response_code(500);
+    echo "Error during sending";
 }
 ?>

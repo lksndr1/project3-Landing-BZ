@@ -364,7 +364,7 @@ header.hide {
                     width: 100%;
                     background: transparent;
                     padding-bottom: 12px;
-                    color: #D8D5FF;
+                    color: #8367af;
                     cursor: pointer;
                     display: flex;
                     gap: 12px;
@@ -376,7 +376,7 @@ header.hide {
                         width: 32px;
                         height: 32px;
                         border-radius: 5px;
-                        background-color: #D8D5FF;
+                        background-color: #8367af;
                     }
                 }
 
