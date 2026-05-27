@@ -1,40 +1,66 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
+if ($_SERVER["REQUEST_METHOD"] !== "POST") {
+    http_response_code(405);
+    exit("Method Not Allowed");
+}
 
-    $first_name = htmlspecialchars(trim($_POST["first_name"]));
-    $last_name  = htmlspecialchars(trim($_POST["last_name"]));
-    $email      = htmlspecialchars(trim($_POST["email"]));
-    $phone      = htmlspecialchars(trim($_POST["phone"]));
-    $message    = htmlspecialchars(trim($_POST["message"]));
+$first_name = trim($_POST["first_name"] ?? '');
+$last_name  = trim($_POST["last_name"] ?? '');
+$email      = trim($_POST["email"] ?? '');
+$phone      = trim($_POST["phone"] ?? '');
+$message    = trim($_POST["message"] ?? '');
 
-    $to = "biuro@biznes-zone.com";
-    $subject = "New message from BZ-landing-Lodz";
+if (
+    empty($first_name) ||
+    empty($email) ||
+    empty($phone)
+) {
+    http_response_code(400);
+    exit("Please fill required fields");
+}
 
-    $body = "
-    Name: $first_name
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    exit("Invalid email");
+}
 
-    Last name: $last_name
+$email = str_replace(["\r", "\n"], '', $email);
 
-    Email: $email
+$to = "oleksandr.siczynski@twojstartup.pl";
+$subject = "New message from BZ-landing-Lodz";
 
-    Phone: $phone
+$body = <<<TEXT
+Name: $first_name
 
-    Message:
-    $message
-    ";
+Last name: $last_name
 
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+Email: $email
 
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Success";
-    } else {
-        echo "Error during sending";
-    }
+Phone: $phone
 
+Message:
+$message
+TEXT;
+
+$headers = [];
+$headers[] = "From: no-reply@biznes-zone.com";
+$headers[] = "Reply-To: $email";
+$headers[] = "Content-Type: text/plain; charset=UTF-8";
+
+$headers_string = implode("\r\n", $headers);
+
+$success = mail(
+    $to,
+    $subject,
+    $body,
+    $headers_string
+);
+
+if ($success) {
+    echo "Success";
 } else {
-    echo "Fault";
+    http_response_code(500);
+    echo "Error during sending";
 }
 ?>
