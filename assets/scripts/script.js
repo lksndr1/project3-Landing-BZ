@@ -165,6 +165,9 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
         .then(res => res.text())
         .then(response => {
             if (response.includes("Success")) {
+
+                fbq('track', 'Lead');
+
                 form.style.display = "none";
                 document.getElementById("successMessage").style.display = "block";
             } else {
